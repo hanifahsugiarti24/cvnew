@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Interaktif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #cv-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="cv-container">
+        <h1>Curriculum Vitae</h1>
+
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+
+        <h2>Education</h2>
+        <p><strong>University:</strong> Example University</p>
+        <p><strong>Degree:</strong> Bachelor of Science in Computer Science</p>
+        <p><strong>Year:</strong> 2010-2014</p>
+
+        <h2>Experience</h2>
+        <p><strong>Company:</strong> Example Company</p>
+        <p><strong>Position:</strong> Software Developer</p>
+        <p><strong>Year:</strong> 2014-2018</p>
+
+        <h2>Skills</h2>
+        <p><strong>Programming:</strong> JavaScript, HTML, CSS</p>
+        <p><strong>Frameworks:</strong> React, Node.js</p>
+
+        <button id="toggle-button">Toggle Details</button>
+        
+        <div id="hidden-details" class="hidden">
+            <h2>Additional Details</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta?</p>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const hiddenDetails = document.getElementById('hidden-details');
+
+        toggleButton.addEventListener('click', () => {
+            hiddenDetails.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
